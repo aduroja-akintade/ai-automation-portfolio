@@ -10,6 +10,42 @@
 
 The walkthrough covers the controlled Gmail trigger, duplicate guard, Gemini classification, structured output, deterministic routing, Gmail and Slack delivery, fallback behavior, retry handling, and duplicate-prevention proof.
 
+## Build evidence
+
+The screenshots below are captured from the actual n8n implementation and test executions. They are included as technical evidence rather than illustrative mockups.
+
+### 1. Final n8n workflow
+
+![Final Cupid Errands n8n workflow](./01-final-n8n-workflow.png)
+
+The complete workflow shows the controlled Gmail intake, field normalization, duplicate guard, Gemini classifier with structured output, deterministic Department Router, five department-specific Gmail/Slack branches, and final processed-state update.
+
+### 2. Successful end-to-end Sales execution
+
+![Successful Sales execution in n8n](./02-sales-successful-execution.png)
+
+A real successful execution shows the active path from Gmail intake through classification and routing into the Sales email and Slack actions before the message is marked processed. The execution history also provides evidence of repeated workflow testing.
+
+### 3. Successful Office/Admin execution
+
+![Successful Office Admin execution in n8n](./03-office-admin-successful-execution.png)
+
+This execution demonstrates that routing is conditional rather than hard-coded to one branch. The classified message follows the Office/Admin path, completes the department email and Slack actions, and reaches the processed-state update.
+
+### 4. Duplicate-protection test
+
+![Duplicate guard stopping downstream execution](./04-duplicate-guard-test.png)
+
+When an already-processed message is encountered, execution reaches the Duplicate Guard and stops there successfully. No additional model call, department delivery, Slack notification, or processed-state write is performed. This provides direct evidence of the workflow's idempotency control.
+
+### 5. Retry and AI structured-output handling
+
+![Retry configuration and structured AI output](./05-retry-error-handling.png)
+
+During testing, Gemini returned a real `503 Service Unavailable` response. The workflow was hardened with Retry On Fail, configured for up to three attempts with a five-second interval. The evidence also shows successful structured classifier output after the reliability improvement.
+
+**What this evidence demonstrates:** a complete n8n build, successful multi-route execution, deterministic downstream actions, duplicate protection, structured LLM output, and resilience against a transient external API failure.
+
 ## Business problem
 
 A shared inbox becomes a bottleneck when staff must manually read every message, determine which department owns it, forward it, notify the right team, and avoid processing the same email twice.
@@ -105,7 +141,7 @@ The following tests were completed successfully:
 
 ## Retry handling
 
-During testing, Google Gemini returned a temporary `503 Service Unavailable` response caused by high demand. Retry-on-fail was added with three attempts and a delay between attempts so a transient provider failure does not immediately terminate the workflow.
+During testing, Google Gemini returned a temporary `503 Service Unavailable` response caused by high demand. Retry-on-fail was added with three attempts and a five-second delay between attempts so a transient provider failure does not immediately terminate the workflow.
 
 The failed execution was not marked as processed, and a later run completed successfully.
 
@@ -132,7 +168,7 @@ The processed table stores operational metadata such as message ID, department, 
 
 ## Public evidence
 
-Public evidence consists of the video walkthrough, documented architecture, verified test outcomes, and selected implementation details. Credentials, API keys, personal test addresses, Slack identifiers, and other private configuration are intentionally excluded.
+Public evidence consists of the raw n8n implementation screenshots above, the video walkthrough, documented architecture, verified test outcomes, and selected implementation details. Credentials, API keys, personal test addresses, Slack identifiers, and other private configuration are intentionally excluded.
 
 ## Skills demonstrated
 
