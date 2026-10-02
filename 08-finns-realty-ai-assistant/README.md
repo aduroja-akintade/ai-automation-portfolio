@@ -115,6 +115,44 @@ A harder combined property-and-policy test initially exposed excessive agent ite
 - Telegram
 - Google Drive
 
+## Evidence gallery
+
+### 1. Customer-facing AI architecture
+
+![Finn's Realty AI Assistant architecture](./01-finns-realty-ai-assistant-architecture.png)
+
+**What this proves:** The customer runtime separates model orchestration, persistent PostgreSQL conversation memory, live Airtable property inventory and Supabase policy retrieval before returning the response through Telegram.
+
+### 2. Automated knowledge-base ingestion
+
+![Finn's Realty knowledge ingestion architecture](./02-finns-realty-knowledge-ingestion-architecture.png)
+
+**What this proves:** New Drive files are embedded and ingested automatically. Updated source files follow a refresh path that deletes previous chunks before downloading, re-embedding and re-ingesting the updated document.
+
+### 3. Multi-source customer request
+
+![Finn's Realty multi-source Telegram demonstration](./03-finns-realty-multisource-telegram-demo.png)
+
+**What this proves:** A single natural-language request combines a live property search with rental-application policy retrieval. The response returns the matching Harbour View Two-Bed property and the verified application requirements in one customer-facing answer.
+
+### 4. Successful dual-tool execution
+
+![Finn's Realty n8n execution 351](./04-finns-realty-execution-351-multisource-success.png)
+
+**What this proves:** n8n execution #351 completed successfully in 11.827 seconds. In the same agent run, Property Inventory and Policy Knowledge Base both executed successfully before the Telegram response was sent.
+
+### 5. Conversation-memory follow-up
+
+![Finn's Realty conversation memory demonstration](./05-finns-realty-conversation-memory-demo.png)
+
+**What this proves:** After receiving two Helsinki options, the customer asks which is cheaper and whether it allows pets without repeating either property name. The assistant resolves the contextual reference and answers correctly.
+
+### 6. Grounded uncertainty
+
+![Finn's Realty grounded uncertainty demonstration](./06-finns-realty-grounded-uncertainty-demo.png)
+
+**What this proves:** When asked for a specific late-payment penalty that is not available in the approved knowledge base, the assistant does not invent a figure and directs the customer to an authoritative source.
+
 ## Public evidence
 
 The portfolio evidence set includes:
