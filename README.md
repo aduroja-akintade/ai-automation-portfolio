@@ -23,6 +23,7 @@ This repository complements my Cloud/DevOps work by making the automation side o
 | [WhatsApp / Chatwoot CRM Automation](./05-whatsapp-chatwoot-crm/) | Messaging ingestion, webhook processing, CRM-style logging | n8n, Chatwoot, WhatsApp, Google Sheets, Docker | Development and architecture evidence |
 | [AI-Assisted Support with Human Review](./06-ai-support-human-review/) | Context retrieval, AI drafting, approval boundary, CRM follow-up | AI workflow, Gmail, HubSpot | Human-in-the-loop workflow evidence |
 | [Self-Hosted n8n Platform](./07-self-hosted-n8n-platform/) | Automation platform hosting and operational infrastructure | Docker, PostgreSQL, Redis, Traefik, HTTPS | Infrastructure and deployment evidence |
+| [Finn's Realty AI Assistant](./08-finns-realty-ai-assistant/) | Multi-source property search, RAG policy retrieval, persistent memory, automated knowledge ingestion | n8n, Gemini, Airtable, Supabase, PostgreSQL, Telegram, Google Drive | Verified dual-tool execution, grounded policy retrieval, conversational context and ingestion lifecycle |
 
 ## Open demo repository
 
