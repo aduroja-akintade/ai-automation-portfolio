@@ -5,6 +5,22 @@
 
 Finn's Realty AI Assistant is a customer-facing rental-property assistant built in n8n. It demonstrates how a conversational agent can combine current structured property inventory with company policy knowledge, preserve conversational context, and avoid inventing facts that cannot be verified.
 
+## Watch the narrated portfolio demonstration
+
+**[▶ Watch the final 4:58 Finn's Realty technical demonstration](https://drive.google.com/file/d/1E4ATMOcDavrt4feBnmGlrTIrxZqJT2-d/view)**
+
+The narrated demonstration uses authentic OBS recordings of both n8n workflows, Telegram customer messages, and the corresponding successful execution evidence. The case study is a **fictional/synthetic portfolio implementation**, not a real client deployment.
+
+**Recorded proof:**
+
+- AI Assistant execution **#372**: one customer question retrieved a matching Airtable property and application documents from Supabase RAG.
+- AI Assistant execution **#376**: two Helsinki apartment records retrieved from Airtable.
+- AI Assistant execution **#377**: follow-up referencing the two previous properties resolved using PostgreSQL conversation memory.
+- AI Assistant execution **#378**: retrieval-based late-payment question answered without inventing a fee.
+- Knowledge Base Ingestion execution **#346**: Google Drive update path replaced outdated vectors, including SQL output `deleted_chunks: 15`, then stored new embeddings in Supabase.
+
+**Important engineering limitation:** In one property result, a missing `Pets Allowed` value was treated by the assistant as 'No'. In a production design that missing value should instead be treated as unknown and verified. This project illustrates testing and documented improvement needs, not a claim of flawless production behavior.
+
 ## Business problem
 
 A rental customer may ask questions that cross multiple information domains in a single conversation. Current property facts such as availability, price, bedrooms and pet permission belong in structured inventory, while application requirements, deposits and rental procedures belong in an approved policy knowledge base.
