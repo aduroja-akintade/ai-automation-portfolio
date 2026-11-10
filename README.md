@@ -24,7 +24,7 @@ This repository complements my Cloud/DevOps work by making the automation side o
 | [AI-Assisted Support with Human Review](./06-ai-support-human-review/) | Context retrieval, AI drafting, approval boundary, CRM follow-up | AI workflow, Gmail, HubSpot | Human-in-the-loop workflow evidence |
 | [Self-Hosted n8n Platform](./07-self-hosted-n8n-platform/) | Automation platform hosting and operational infrastructure | Docker, PostgreSQL, Redis, Traefik, HTTPS | Infrastructure and deployment evidence |
 | [Finn's Realty AI Assistant](./08-finns-realty-ai-assistant/) | Multi-source property search, RAG policy retrieval, persistent memory, automated knowledge ingestion | n8n, Gemini, Airtable, Supabase, PostgreSQL, Telegram, Google Drive | [4:58 narrated video](https://drive.google.com/file/d/1E4ATMOcDavrt4feBnmGlrTIrxZqJT2-d/view), tested execution #372/#376/#377/#378 and ingestion #346 |
-| [North Harbour Clinic Appointment Booking](./09-north-harbour-clinic-booking/) | Conflict-safe appointment reservation, Calendar confirmation, 24h/2h reminders, duplicate suppression and recovery audit | n8n, PostgreSQL, Google Calendar, Gmail | Controlled test executions #409/#410, #404/#406 and #419/#420; narrated recording exists, public video link pending |
+| [North Harbour Clinic Appointment Booking](./09-north-harbour-clinic-booking/) | Conflict-safe appointment reservation, Calendar confirmation, 24h/2h reminders, duplicate suppression and recovery audit | n8n, PostgreSQL, Google Calendar, Gmail | [3:29 narrated video](https://github.com/aduroja-akintade/ai-automation-portfolio/blob/main/09-north-harbour-clinic-booking/north-harbour-clinic-demo.mp4), controlled execution tests #409/#410, #404/#406, #419/#420 |
 
 ## Open demo repository
 
