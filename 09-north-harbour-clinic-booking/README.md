@@ -94,11 +94,15 @@ A manually invoked diagnostic workflow checks for unfinished slot reservations a
 4. Deployment runbooks, retention policies and assessment of any sensitive personal-data processing.
 5. **Optional voice receptionist:** A separate voice/API concept was drafted. It has **not** been validated as a working production voice assistant and is not part of this verified demo.
 
-## Portfolio demonstration
+## Watch the North Harbour Clinic demonstration
 
-A narrated OBS walkthrough of the booking and same-slot rejection tests was recorded, including execution **#419**, rejection **#420**, and a Google Calendar check. A separate combined engineering demo (8:26) also includes North Harbour Clinic. **No verified public video URL is available for these recordings yet, so this page intentionally does not display a fake watch link.**
+**[▶ Watch the 3:29 clinic engineering demonstration](https://github.com/aduroja-akintade/ai-automation-portfolio/blob/main/09-north-harbour-clinic-booking/north-harbour-clinic-demo.mp4)**
 
-For already-public examples of other automation projects, see:
+This edited, narrated clip uses authentic OBS recordings and shows the n8n booking workflow, tested acceptance/rejection paths and the Google Calendar verification. It was extracted from the original 8:26 combined Axyon portfolio video and optimized for web playback (15 fps, H.264/AAC). The longer source recording and high-quality version are preserved separately.
+
+This is a **fictional/synthetic healthcare scenario**, not a client deployment or a production healthcare service. The demo does not cover every reminder and fault-injection test; those are described in the evidence table above.
+
+Other original project demonstrations:
 
 - [Finn's Realty AI Assistant, 4:58 narrated walkthrough](https://drive.google.com/file/d/1E4ATMOcDavrt4feBnmGlrTIrxZqJT2-d/view)
 - [Cupid Errands email-routing walkthrough](https://www.tella.tv/video/ai-email-routing-system-dql7)
